@@ -1,0 +1,44 @@
+legend
+{
+color:rgb(18, 18, 111)
+}
+label{
+    font-style: bold;
+}
+button{
+    background-color: green;
+}
+input[type=text], select {
+    width: 50%;
+    padding: 5px 40px;
+   
+  }
+input[type=email]
+{
+    width:50%;
+    padding: 5px 40px;
+}
+  button{
+    background-color: green;
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form{
+padding:20px;
+background-color: #f0eded;
+margin-left: 33%;
+margin-right: 43%;
+margin-top: 3%;
+margin-bottom: 5%;
+
+  }
+  input.ng-invalid.ng-touched
+  {
+    border:red 1px solid;
+  }

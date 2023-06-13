@@ -1,0 +1,45 @@
+<div class="form">
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <legend id="regform"><b><h2>Registration form</h2></b></legend>
+    <p><b>Fields marked with (*)are mandatory</b></p>
+    <p><b>* First Name</b></p>
+    <input type="text" placeholder=" your first name..." formControlName="firstname" required>
+    <p><b>* Last Name</b></p>
+    <input type="text" placeholder="your last name.." formControlName="lastname">
+    <p><b>* Email</b></p>
+    <input type="email" placeholder="email id.." formControlName="email">
+    <div>
+      <span style="color:red" *ngIf="!reactiveForm.get('email').valid">The email you entered is not valid</span>
+    </div>
+    <p><b>Country</b></p>
+    <select formControlName="country">
+      <option>India</option>
+      <option>USA</option>
+      <option>UK</option>
+      <option>London</option>
+
+    </select><br>
+    <label><b>* Gender</b></label><br>
+    <input type="radio" value="Male" name="gender" formControlName="gender">
+    <label for="male">Male</label>
+    <input type="radio" value="Female" name="gender" formControlName="gender">
+    <label for="female">Female</label>
+    <br>
+<p><b>Hobbies (Optional)</b></p>
+
+<input type="checkbox" value="Sports" formControlName="hobbies">
+<label>Sports</label>
+
+<input type="checkbox" value="Cooking" formControlName="hobbies">
+<label>Cooking</label><br>
+
+<input type="checkbox" value="Painting" formControlName="hobbies">
+<label>Painting</label>
+
+<input type="checkbox" value="Dancing" formControlName="hobbies">
+<label>Dancing</label><br>
+
+
+<button>Submit</button>
+ </form>
+</div>
